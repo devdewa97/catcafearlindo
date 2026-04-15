@@ -26,7 +26,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group" onClick={handleLinkClick}>
             <img
-              src="/logo.png"
+              src="https://medivacare.com/wp-content/uploads/2026/04/LOGO-WEB-CAFE-ARLINDO-FOOTER.png"
               alt="Cat Cafe Logo"
               className="h-8 md:h-10 w-auto object-contain"
             />

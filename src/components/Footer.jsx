@@ -23,7 +23,7 @@ export default function Footer() {
             <div className="lg:col-span-1">
               <Link to="/" className="inline-block mb-4">
                 <img
-                  src="/logo.png"
+                  src="https://medivacare.com/wp-content/uploads/2026/04/LOGO-WEB-CAFE-ARLINDO-FOOTER.png"
                   alt="Cat Cafe Logo"
                   className="h-20 md:h-24 w-auto object-contain"
                 />
