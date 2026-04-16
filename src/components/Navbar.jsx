@@ -29,7 +29,7 @@ export default function Navbar() {
             <img
               src="https://medivacare.com/wp-content/uploads/2026/04/LOGO-WEB-CAFE-ARLINDO-FOOTER.png"
               alt="Cat Cafe Logo"
-              className="h-8 md:h-10 w-auto object-contain"
+              className="h-10 md:h-12 w-auto object-contain"
             />
           </Link>
 
@@ -60,18 +60,18 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="xl:hidden p-2 rounded-lg hover:bg-secondary-50 transition-colors"
+            className="xl:hidden p-3 rounded-lg hover:bg-secondary-50 transition-colors"
             aria-label="Toggle menu"
           >
-            <div className="w-6 h-5 flex flex-col justify-between">
-              <span className={`block h-0.5 rounded-full transition-all duration-300 ${
-                isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
+            <div className="w-7 h-6 flex flex-col justify-between">
+              <span className={`block h-1 rounded-full transition-all duration-300 ${
+                isMobileMenuOpen ? 'rotate-45 translate-y-3' : ''
               } bg-secondary-800`} />
-              <span className={`block h-0.5 rounded-full transition-all duration-300 ${
+              <span className={`block h-1 rounded-full transition-all duration-300 ${
                 isMobileMenuOpen ? 'opacity-0' : ''
               } bg-secondary-800`} />
-              <span className={`block h-0.5 rounded-full transition-all duration-300 ${
-                isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
+              <span className={`block h-1 rounded-full transition-all duration-300 ${
+                isMobileMenuOpen ? '-rotate-45 -translate-y-3' : ''
               } bg-secondary-800`} />
             </div>
           </button>
@@ -93,7 +93,7 @@ export default function Navbar() {
                     key={link.path}
                     to={link.path}
                     onClick={handleLinkClick}
-                    className={`px-4 py-3 rounded-xl font-medium text-sm transition-colors ${
+                    className={`px-4 py-3.5 rounded-xl font-medium text-base transition-colors ${
                       location.pathname === link.path
                         ? 'bg-primary-50 text-primary-500'
                         : 'text-secondary-700 hover:bg-secondary-50'
@@ -105,7 +105,7 @@ export default function Navbar() {
                 <Link
                   to="/reservation"
                   onClick={handleLinkClick}
-                  className="btn-primary text-center mt-2 text-sm mx-4"
+                  className="btn-primary text-center mt-3 text-base mx-4 py-3"
                 >
                   Reservasi Sekarang
                 </Link>
