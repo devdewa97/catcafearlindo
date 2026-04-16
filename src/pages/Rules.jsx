@@ -33,7 +33,7 @@ export default function Rules() {
         <div className="container-custom">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="text-center">
             <motion.h1 variants={fadeInUp} className="text-4xl md:text-5xl font-bold text-secondary-900 mb-3">Aturan <span className="text-primary-500">Cafe</span></motion.h1>
-            <motion.p variants={fadeInUp} className="text-secondary-600 text-lg max-w-2xl mx-auto">Untuk memastikan pengalaman yang aman dan nyaman bagi semua</motion.p>
+            <motion.p variants={fadeInUp} className="text-secondary-600 text-lg max-w-2xl mx-auto">Demi menjaga kenyamanan, keamanan, dan kebersamaan, mohon setiap pengunjung mengikuti peraturan yang berlaku.</motion.p>
           </motion.div>
         </div>
       </section>
@@ -83,7 +83,7 @@ export default function Rules() {
         <div className="container-custom">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
             <h2 className="text-xl font-bold text-secondary-900 mb-2">Masih Ada Pertanyaan?</h2>
-            <p className="text-secondary-600 mb-4">Jika Anda masih memiliki pertanyaan tentang aturan, silakan hubungi kami</p>
+            <p className="text-secondary-600 mb-4">Tim kami siap membantu Anda. Silakan hubungi kami untuk informasi lebih lanjut terkait aturan yang berlaku.</p>
             <a href="/faq" className="inline-block btn-primary">Lihat FAQ</a>
           </motion.div>
         </div>

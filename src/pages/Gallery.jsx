@@ -50,7 +50,7 @@ export default function Gallery() {
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="text-center">
             <motion.p variants={fadeInUp} className="text-primary-500 font-medium mb-4">Gallery</motion.p>
             <motion.h1 variants={fadeInUp} className="text-4xl md:text-5xl font-bold text-secondary-900 mb-4">Galeri <span className="text-primary-500">Foto</span></motion.h1>
-            <motion.p variants={fadeInUp} className="text-secondary-600 text-lg max-w-2xl mx-auto">Momen-momen menggemaskan dari kucing-kucing kami dan fasilitas cafe</motion.p>
+            <motion.p variants={fadeInUp} className="text-secondary-600 text-lg max-w-2xl mx-auto">Temukan berbagai momen istimewa bersama kucing-kucing kami, lengkap dengan suasana dan fasilitas cafe yang dirancang untuk kenyamanan Anda.</motion.p>
           </motion.div>
         </div>
       </section>

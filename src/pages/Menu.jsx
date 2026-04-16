@@ -69,7 +69,7 @@ export default function Menu() {
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="text-center">
             <motion.p variants={fadeInUp} className="text-primary-500 font-medium mb-4">Our Menu</motion.p>
             <motion.h1 variants={fadeInUp} className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">Menu <span className="text-primary-500">Cafe</span></motion.h1>
-            <motion.p variants={fadeInUp} className="text-secondary-600 text-lg max-w-2xl mx-auto">Nikmati berbagai pilihan kopi, drinks, dan makanan ringan yang lezat</motion.p>
+            <motion.p variants={fadeInUp} className="text-secondary-600 text-lg max-w-2xl mx-auto">Kami menghadirkan pilihan kopi, minuman, dan hidangan ringan berkualitas untuk menemani setiap momen bersantai Anda.</motion.p>
           </motion.div>
         </div>
       </section>
@@ -131,9 +131,9 @@ export default function Menu() {
 
         <div className="container-custom relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-sm">Ingin Pesan Untuk Event?</h2>
-            <p className="text-white/90 mb-6 drop-shadow">Kami juga menerima pemesanan untuk ulang tahun, gathering, dan event khusus</p>
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-primary-600 px-8 py-3 rounded-2xl font-semibold hover:shadow-lg hover:scale-105 transition-all">Hubungi Kami via WhatsApp</a>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-sm">Ingin Mengadakan Event?</h2>
+            <p className="text-white/90 mb-6 drop-shadow">Kami menerima pemesanan untuk berbagai acara, seperti ulang tahun, gathering, dan event khusus lainnya dengan suasana yang hangat dan berkesan.</p>
+            <a href="/event-paket" className="inline-block bg-white text-primary-600 px-8 py-3 rounded-2xl font-semibold hover:shadow-lg hover:scale-105 transition-all">Paket Event Cat Cafe</a>
           </motion.div>
         </div>
       </section>

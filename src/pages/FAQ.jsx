@@ -57,7 +57,7 @@ export default function FAQ() {
         <div className="container-custom">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="text-center">
             <motion.h1 variants={fadeInUp} className="text-3xl md:text-4xl font-bold text-secondary-900 mb-3">Pertanyaan <span className="text-primary-500">Umum</span></motion.h1>
-            <motion.p variants={fadeInUp} className="text-secondary-600 text-base max-w-2xl mx-auto">Jawaban untuk pertanyaan yang sering ditanyakan oleh pengunjung</motion.p>
+            <motion.p variants={fadeInUp} className="text-secondary-600 text-base max-w-2xl mx-auto">Kami telah merangkum jawaban dari pertanyaan yang paling sering ditanyakan untuk membantu Anda mendapatkan informasi dengan lebih mudah.</motion.p>
           </motion.div>
         </div>
       </section>

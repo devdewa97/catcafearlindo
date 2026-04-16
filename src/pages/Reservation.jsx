@@ -82,7 +82,7 @@ export default function Reservation() {
               Reservasi <span className="text-primary-500">Sekarang</span>
             </motion.h1>
             <motion.p variants={fadeInUp} className="text-secondary-600 text-lg max-w-2xl mx-auto">
-              Pesan tempatmu sekarang dan nikmati pengalaman bersantai yang tak terlupakan
+              Lakukan reservasi sekarang dan rasakan momen relaksasi yang istimewa dalam suasana yang nyaman dan penuh kehangatan.
             </motion.p>
           </motion.div>
         </div>
@@ -177,7 +177,7 @@ export default function Reservation() {
       <section className="section-padding bg-primary-50">
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-8">
-            {[{ title: 'Lokasi', desc: 'Jl. Ketintang Raya No. 123, Surabaya' }, { title: 'Jam Buka', desc: 'Setiap hari 10:00 - 21:00' }, { title: 'Kontak', desc: '+62 812 3456 7890' }].map((item, index) => (
+            {[{ title: 'Lokasi', desc: 'Jl. Citra Grand Cibubur CBD No.35 & 36 BLOK FR 01, Jatirangga, Kec. Jatisampurna, Kota Bks, Jawa Barat 17435' }, { title: 'Jam Buka', desc: 'Datang dan nikmati momen santai Anda bersama kami setiap hari, pukul 10.00 – 21.00 WIB.' }, { title: 'Kontak', desc: 'Hubungi admin kami untuk informasi lebih lanjut dan reservasi: 0812 3456 7890' }].map((item, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="bg-white rounded-2xl p-6 text-center shadow-soft">
                 <h3 className="font-bold text-secondary-900 mb-2">{item.title}</h3>
                 <p className="text-secondary-600">{item.desc}</p>
