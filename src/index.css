@@ -48,6 +48,26 @@
   }
 }
 
+/* Custom Scrollbar - Orange Theme */
+@layer base {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-500 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-600;
+  }
+}
+
 @layer utilities {
   .text-gradient {
     @apply bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent;
