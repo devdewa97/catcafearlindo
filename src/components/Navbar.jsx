@@ -7,6 +7,7 @@ const navLinks = [
   { name: 'Reservation', path: '/reservation' },
   { name: 'Menu Cafe', path: '/menu' },
   { name: 'Gallery', path: '/gallery' },
+  { name: 'Event Paket', path: '/event-paket' },
   { name: 'Rules', path: '/rules' },
   { name: 'FAQ', path: '/faq' },
 ]

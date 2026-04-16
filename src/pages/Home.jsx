@@ -43,6 +43,9 @@ const testimonials = [
   { id: 1, name: 'Siti Rahayu', role: 'Customer', text: 'Tempatnya sangat nyaman! Kopinya enak dan kucing-kucingnya super friendly. Pasti akan kembali lagi.' },
   { id: 2, name: 'Budi Santoso', role: 'Customer', text: 'Pengalaman yang luar biasa. Anak-anak sangat senang bermain dengan kucing. Staffnya juga ramah.' },
   { id: 3, name: 'Dewi Lestari', role: 'Customer', text: 'Suka banget sama suasananya. Cocok buat nongkrong sama teman atau kerja santai. Sangat direkomendasikan!' },
+  { id: 4, name: 'Siti Rahayu', role: 'Customer', text: 'Tempatnya sangat nyaman! Kopinya enak dan kucing-kucingnya super friendly. Pasti akan kembali lagi.' },
+  { id: 5, name: 'Budi Santoso', role: 'Customer', text: 'Pengalaman yang luar biasa. Anak-anak sangat senang bermain dengan kucing. Staffnya juga ramah.' },
+  { id: 6, name: 'Dewi Lestari', role: 'Customer', text: 'Suka banget sama suasananya. Cocok buat nongkrong sama teman atau kerja santai. Sangat direkomendasikan!' },
 ]
 
 export default function Home() {

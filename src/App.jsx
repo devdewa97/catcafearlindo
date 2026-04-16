@@ -9,6 +9,7 @@ import Menu from './pages/Menu'
 import Gallery from './pages/Gallery'
 import Rules from './pages/Rules'
 import FAQ from './pages/FAQ'
+import EventPaket from './pages/EventPaket'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/rules" element={<Rules />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/event-paket" element={<EventPaket />} />
           </Routes>
         </main>
         <Footer />

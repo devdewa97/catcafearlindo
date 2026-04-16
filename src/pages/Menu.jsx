@@ -78,7 +78,7 @@ export default function Menu() {
         <div className="container-custom py-4">
           <div className="flex gap-2 overflow-x-auto pb-2">
             {categories.map((category) => (
-              <motion.button key={category.id} onClick={() => setActiveCategory(category.id)} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className={`px-6 py-3 rounded-full font-medium whitespace-nowrap transition-all ${activeCategory === category.id ? 'bg-primary-500 text-white shadow-md' : 'bg-secondary-100 text-secondary-700 hover:bg-primary-50'}`}>
+              <motion.button key={category.id} onClick={() => setActiveCategory(category.id)} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className={`px-4 py-2 text-sm md:px-6 md:py-3 md:text-base rounded-full font-medium whitespace-nowrap transition-all ${activeCategory === category.id ? 'bg-primary-500 text-white shadow-md' : 'bg-secondary-100 text-secondary-700 hover:bg-primary-50'}`}>
                 {category.name}
               </motion.button>
             ))}
