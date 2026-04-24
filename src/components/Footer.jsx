@@ -14,6 +14,12 @@ const quickLinks = [
   { name: 'Reservation', path: '/reservation' },
 ]
 
+const foodDeliveryLinks = [
+  { name: 'Grab Food', href: '#', logo: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1777007729/grepud_zwzbl9.png' },
+  { name: 'Shopee Food', href: '#', logo: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1777007729/sopipod_qfifme.png' },
+  { name: 'Go Food', href: '#', logo: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1777007729/Gopud_i3ajv1.png' },
+]
+
 export default function Footer() {
   return (
     <footer className="bg-secondary-900 text-secondary-100">
@@ -72,6 +78,29 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
+
+              {/* Food Delivery Links - Icon Placeholders */}
+              <div className="mt-6">
+                <h4 className="font-bold text-white text-base mb-3">Pesan Makanan</h4>
+                <div className="flex gap-3 items-center">
+                  {foodDeliveryLinks.map((food) => (
+                    <motion.a
+                      key={food.name}
+                      href={food.href}
+                      whileHover={{ scale: 1.1, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="w-12 h-12 md:w-14 md:h-14 bg-white/10 flex items-center justify-center hover:bg-primary-500/30 transition-colors"
+                      aria-label={food.name}
+                    >
+                      <img
+                        src={food.logo}
+                        alt={food.name}
+                        className="w-full h-full object-contain p-1"
+                      />
+                    </motion.a>
+                  ))}
+                </div>
+              </div>
             </div>
 
             <div>

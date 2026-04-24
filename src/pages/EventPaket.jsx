@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -20,7 +20,8 @@ const eventPackages = [
     name: 'Birthday Party',
     description: 'Rayakan ulang tahun special dengan ruangan private eksklusif, dekorasi lengkap, dan berbagai hidangan lezat untuk tamu undangan.',
     image: 'https://img.freepik.com/free-photo/birthday-party-concept-with-joyful-people_23-2147716819.jpg',
-    price: 'Rp 3.500.000',
+    price: 'Rp 150.000',
+    pricePer: '/orang',
     minOrder: 'Min. 10 Orang',
     facilities: [
       'Ruangan private eksklusif',
@@ -39,7 +40,8 @@ const eventPackages = [
     name: 'Arisan & Gathering',
     description: 'Waktu berkualitas bersama keluarga, teman, atau rekan kerja dengan suasana cozy dan hidangan prasmanan.',
     image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600',
-    price: 'Rp 4.500.000',
+    price: 'Rp 150.000',
+    pricePer: '/orang',
     minOrder: 'Min. 15 Orang',
     facilities: [
       'Ruangan private eksklusif',
@@ -58,7 +60,8 @@ const eventPackages = [
     name: 'BBQ Home Service',
     description: 'Nikmati pengalaman BBQ langsung di lokasi Anda dengan chef profesional dan peralatan lengkap.',
     image: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=600',
-    price: 'Rp 9.000.000',
+    price: 'Rp 200.000',
+    pricePer: '/orang',
     minOrder: 'Min. 20 Orang',
     facilities: [
       'BBQ Grilling di lokasi tujuan',
@@ -77,8 +80,9 @@ const eventPackages = [
     name: 'Catering Service',
     description: 'Paket catering lengkap untuk event kantor, seminar, atau acara keluarga dengan pengiriman ke lokasi.',
     image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600',
-    price: 'Rp 7.500.000',
-    minOrder: 'Min. 30 Porsi',
+    price: 'Rp 150.000',
+    pricePer: '/orang',
+    minOrder: 'Min. 30 Orang',
     facilities: [
       'Makanan berat lengkap',
       '5+ varian menu masakan',
@@ -125,7 +129,7 @@ export default function EventPaket() {
         <div className="container-custom">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {eventPackages.map((pkg) => (
-              <motion.div key={pkg.id} variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className={`bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all ${openPackage === pkg.id ? 'ring-2 ring-primary-500' : ''}`}>
+              <motion.div key={pkg.id} variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
                 <div className="aspect-[4/3] overflow-hidden bg-secondary-100">
                   <img src={pkg.image} alt={pkg.name} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
                 </div>
@@ -136,27 +140,50 @@ export default function EventPaket() {
 
                   <div className="flex items-end justify-between mb-4">
                     <div>
-                      <p className="text-primary-600 font-bold text-xl md:text-2xl">{pkg.price}</p>
+                      <p className="text-primary-600 font-bold text-xl md:text-2xl">{pkg.price} <span className="text-sm font-normal text-secondary-500">{pkg.pricePer}</span></p>
                       <p className="text-secondary-400 text-xs">{pkg.minOrder}</p>
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between text-sm font-medium">
-                    <button onClick={() => setOpenPackage(openPackage === pkg.id ? null : pkg.id)} className="text-primary-600 hover:text-primary-700">
-                      {openPackage === pkg.id ? 'Tutup' : 'Lihat Fasilitas'}
-                    </button>
-                    <motion.span animate={{ rotate: openPackage === pkg.id ? 180 : 0 }} className="text-primary-500">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </motion.span>
-                  </div>
+                  <button onClick={() => setOpenPackage(pkg.id)} className="w-full btn-secondary py-2.5 text-sm font-medium">
+                    Lihat Detail
+                  </button>
                 </div>
 
-                {openPackage === pkg.id && (
-                  <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} className="px-5 pb-5">
-                    <div className="pt-4 border-t border-secondary-200">
-                      <ul className="space-y-2 mb-4">
+                {/* Expanded content removed - now using modal popup */}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Modal Popup */}
+      <AnimatePresence>
+        {openPackage && (
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={() => setOpenPackage(null)}>
+            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+            {(() => {
+              const pkg = eventPackages.find(p => p.id === openPackage)
+              return (
+                <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="relative bg-white rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+                  <button onClick={() => setOpenPackage(null)} className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-primary-500 text-white hover:bg-primary-600 transition-colors z-10">
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="18" y1="6" x2="6" y2="18" />
+                      <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                  </button>
+                  <img src={pkg.image} alt={pkg.name} className="w-full h-48 object-cover" />
+                  <div className="p-6">
+                    <h3 className="font-bold text-xl text-secondary-900 mb-2">{pkg.name}</h3>
+                    <p className="text-secondary-600 text-sm mb-4">{pkg.description}</p>
+                    <div className="flex items-baseline gap-1 mb-4">
+                      <span className="text-primary-600 font-bold text-2xl">{pkg.price}</span>
+                      <span className="text-secondary-500">{pkg.pricePer}</span>
+                    </div>
+                    <p className="text-secondary-500 text-sm mb-4">{pkg.minOrder}</p>
+                    <div className="border-t border-secondary-200 pt-4 mb-4">
+                      <h4 className="font-semibold text-secondary-900 mb-3">Fasilitas:</h4>
+                      <ul className="space-y-2">
                         {pkg.facilities.map((facility, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-sm text-secondary-600">
                             <svg className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -166,17 +193,17 @@ export default function EventPaket() {
                           </li>
                         ))}
                       </ul>
-                      <a href={`https://wa.me/6281234567890?text=Halo%20Cat%20Cafe%2C%20saya%20ingin%20pemesanan%20paket%20${encodeURIComponent(pkg.name)}`} target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center block py-3">
-                        Pesan Sekarang
-                      </a>
                     </div>
-                  </motion.div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+                    <a href={`https://wa.me/6281234567890?text=Halo%20Cat%20Cafe%2C%20saya%20ingin%20pemesanan%20paket%20${encodeURIComponent(pkg.name)}`} target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center block py-3">
+                      Pesan Sekarang
+                    </a>
+                  </div>
+                </motion.div>
+              )
+            })()}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <section className="py-10 md:py-14 bg-secondary-50">
         <div className="container-custom">

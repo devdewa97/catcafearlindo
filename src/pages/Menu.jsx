@@ -101,8 +101,6 @@ export default function Menu() {
                         <h3 className="font-bold text-secondary-900 text-sm">{item.name}</h3>
                         {item.badge && <span className="bg-primary-100 text-primary-600 text-xs font-semibold px-2 py-0.5 rounded-full">{item.badge}</span>}
                       </div>
-                      <p className="text-secondary-500 text-xs mb-2">{item.desc}</p>
-                      <span className="text-primary-500 font-bold text-sm">{item.price}</span>
                     </div>
                   </motion.div>
                 ))}

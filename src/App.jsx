@@ -10,6 +10,7 @@ import Gallery from './pages/Gallery'
 import Rules from './pages/Rules'
 import FAQ from './pages/FAQ'
 import EventPaket from './pages/EventPaket'
+import Adopsi from './pages/Adopsi'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/adopsi" element={<Adopsi />} />
             <Route path="/reservation" element={<Reservation />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/gallery" element={<Gallery />} />
