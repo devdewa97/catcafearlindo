@@ -24,7 +24,7 @@ const faqItems = [
   { question: 'Bagaimana jika saya terlambat datang?', answer: 'Jika Anda terlambat lebih dari 15 menit, sesi kunjungan Anda mungkin akan dipotong sesuai waktu keterlambatan. Kami menghargai waktu kunjungan pelanggan lain.' },
   { question: 'Apakah bisa membawa kucing sendiri?', answer: 'Mohon maaf, kami tidak mengizinkan pengunjung membawa hewan peliharaan mereka sendiri. Ini untuk menjaga kesehatan dan keamanan kucing-kucing yang ada di cafe kami.' },
   { question: 'Apakah tersedia paket ulang tahun?', answer: 'Ya! Kami menyediakan paket ulang tahun khusus yang meliputi tempat duduk khusus, makanan ringan, dan kesempatan foto dengan kucing. Hubungi kami untuk informasi lebih lanjut.' },
-  { question: 'Bagaimana cara menghubungi customer service?', answer: 'Anda dapat menghubungi kami melalui WhatsApp di +62 812 3456 7890, email di hello@catcafe Arlindo.com, atau melalui media sosial kami.' },
+  { question: 'Bagaimana cara menghubungi customer service?', answer: 'Anda dapat menghubungi kami melalui WhatsApp di +62 814 1242 8997, email di hello@catcafe Arlindo.com, atau melalui media sosial kami.' },
 ]
 
 function FAQItem({ item, index, isOpen, onToggle }) {
@@ -94,7 +94,7 @@ export default function FAQ() {
               <h2 className="text-xl md:text-2xl font-bold text-white mb-3 drop-shadow-sm">Masih Ada Pertanyaan Lain?</h2>
               <p className="text-white/90 mb-5 max-w-lg mx-auto text-sm drop-shadow">Jika Anda tidak menemukan jawaban yang Anda cari, jangan ragu untuk menghubungi kami langsung.</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="bg-white text-primary-600 px-6 py-2.5 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all text-sm">Hubungi via WhatsApp</a>
+                <a href="https://wa.me/6281412428997" target="_blank" rel="noopener noreferrer" className="bg-white text-primary-600 px-6 py-2.5 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all text-sm">Hubungi via WhatsApp</a>
                 <a href="/reservation" className="border-2 border-white text-white px-6 py-2.5 rounded-full font-semibold hover:bg-white/10 transition-all text-sm">Buat Reservasi</a>
               </div>
             </div>

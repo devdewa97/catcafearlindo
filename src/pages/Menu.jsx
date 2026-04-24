@@ -18,6 +18,7 @@ const categories = [
   { id: 'all', name: 'All Menu' },
   { id: 'coffee', name: 'Coffee' },
   { id: 'non-coffee', name: 'Non-Coffee' },
+  { id: 'makanan', name: 'Makanan' },
   { id: 'snacks', name: 'Snacks' },
   { id: 'drinks', name: 'Drinks' },
 ]
@@ -41,6 +42,14 @@ const menuItems = {
     { id: 3, name: 'Blueberry Muffin', desc: 'Muffin blueberry homemade', price: 'Rp 22.000', badge: 'Popular', image: 'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=400' },
     { id: 4, name: 'Cheese Cake', desc: 'Kue cheese lembut', price: 'Rp 25.000', badge: null, image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=400' },
   ],
+  makanan: [
+    { id: 1, name: 'Nasi Goreng Special', desc: 'Nasi goreng dengan topping ayam', price: 'Rp 35.000', badge: 'Best Seller', image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400' },
+    { id: 2, name: 'Mie Goreng', desc: 'Mie goreng lezat khas cafe', price: 'Rp 30.000', badge: null, image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f963?w=400' },
+    { id: 3, name: 'Chicken Steak', desc: 'Steak ayam dengan sayuran', price: 'Rp 45.000', badge: 'Popular', image: 'https://images.unsplash.com/photo-1600891964092-4316c288032e?w=400' },
+    { id: 4, name: 'Pasta Carbonara', desc: 'Pasta dengan saus creamy', price: 'Rp 40.000', badge: null, image: 'https://images.unsplash.com/photo-1612874742237-6526221588e3?w=400' },
+    { id: 5, name: 'Chicken Wings', desc: 'Sayap ayam panggang', price: 'Rp 28.000', badge: null, image: 'https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400' },
+    { id: 6, name: 'Burger Deluxe', desc: 'Burger dengan beef dan keju', price: 'Rp 38.000', badge: null, image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400' },
+  ],
   drinks: [
     { id: 1, name: 'Signature Latte', desc: 'Signature drink andalan kami', price: 'Rp 30.000', badge: 'Best Seller', image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400' },
     { id: 2, name: 'Caramel Macchiato', desc: 'Macchiato dengan karamel', price: 'Rp 28.000', badge: null, image: 'https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=400' },
@@ -53,6 +62,7 @@ const menuItems = {
 const allMenuItems = [
   ...menuItems.coffee,
   ...menuItems['non-coffee'],
+  ...menuItems.makanan,
   ...menuItems.snacks,
   ...menuItems.drinks
 ]

@@ -46,7 +46,7 @@ export default function Reservation() {
     e.preventDefault()
     if (validateForm()) {
       const message = `Halo Cat Cafe by Arlindo,%0A%0ASaya ingin melakukan reservasi:%0A%0ANama: ${formData.name}%0AEmail: ${formData.email}%0ANomor HP: ${formData.phone}%0ATanggal: ${formData.date}%0AJam: ${formData.time}%0AJumlah Tamu: ${formData.guests}%0ACatatan: ${formData.notes}%0A%0ATerima kasih!`
-      window.open(`https://wa.me/6281234567890?text=${message}`, '_blank')
+      window.open(`https://wa.me/6281412428997?text=${message}`, '_blank')
     }
   }
 
@@ -109,7 +109,7 @@ export default function Reservation() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-secondary-700 font-medium mb-2">Nomor HP *</label>
-                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className={`w-full px-4 py-3 rounded-xl border-2 bg-white focus:outline-none ${errors.phone ? 'border-red-400' : 'border-secondary-200 focus:border-primary-500'}`} placeholder="+62 812 3456 7890" />
+                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className={`w-full px-4 py-3 rounded-xl border-2 bg-white focus:outline-none ${errors.phone ? 'border-red-400' : 'border-secondary-200 focus:border-primary-500'}`} placeholder="+62 814 1242 8997" />
                     {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                   </div>
                   <div>
