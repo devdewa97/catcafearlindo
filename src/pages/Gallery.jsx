@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -14,38 +14,240 @@ const staggerContainer = {
   }
 }
 
-const galleryImages = [
-  { id: 1, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485987/Katniss_4_Agustus_2023_British_Short_Hair_Betina_hirdm8.webp', category: 'cats' },
-  { id: 2, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485984/Nala_10_September_2022_Domestic_Betina_ipp2nr.webp', category: 'cats' },
-  { id: 3, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485982/Kartono_1_Juli_2024_British_Short_Hair_Jantan_xkyigr.webp', category: 'cats' },
-  { id: 4, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485980/Shabrina_11_September_2022_British_Short_Hair_Betina_typfva.webp', category: 'cats' },
-  { id: 5, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485978/Benito_17_Agustus_2022_British_Short_Hair_Jantan_tlpntx.webp', category: 'cats' },
-  { id: 6, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485976/Molly_26_Maret_2024_Persia_Peaknose_Longhair_Betina_wrodb8.webp', category: 'cats' },
-  { id: 7, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485973/Nemo_15_Januari_2022_Domestic_Jantan_e3tjgk.webp', category: 'cats' },
-  { id: 8, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485971/Junior_16_Februari_2024_Persia_Peaknose_Longhair_Jantan_rav7or.webp', category: 'cats' },
-  { id: 9, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485969/Hugo_9_Januari_2023_British_Short_Hair_Jantan_cpc1mn.webp', category: 'cats' },
-  { id: 10, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485967/Hilya_Persia_Peaknose_Longhair_Betina_og7fdq.webp', category: 'cats' },
-  { id: 11, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485965/Chanakya_Puspa_6_Februari_2023_Exotic_ShortHair_Peaknose_Betina_rss4it.webp', category: 'cats' },
-  { id: 12, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485963/Boni_10_Desember_2016_Dom_Mix_Persia_Persia_Medium__Betina_rxxlwf.webp', category: 'cats' },
-  { id: 13, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485961/Xavia_16_Maret_2024_Persia_Peaknose_Longhair_Betina_ligniq.webp', category: 'cats' },
-  { id: 14, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485959/Sadiya_5_Mei_2024_British_Short_Hair_Betina_sjylws.webp', category: 'cats' },
-  { id: 15, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485957/Princes_7_Juni_2025_Ragdoll_Betina_htyffp.webp', category: 'cats' },
-  { id: 16, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485954/Prince_10_Agustus_2025_Ragdoll_Jantan_omnzlb.webp', category: 'cats' },
-  { id: 17, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485952/Olivia_27_April_2018_Persia_Peaknose_Longhair_Betina_dphhpb.webp', category: 'cats' },
-  { id: 18, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485950/Milo_30_Juni_2019_Persia_Peaknose_Longhair_Jantan_hfo2pd.webp', category: 'cats' },
-  { id: 19, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485948/Milea_Persia_Peaknose_Longhair_Betina_qywgqz.webp', category: 'cats' },
-  { id: 20, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485946/Kiko_Persia_Peaknose_Longhair_Jantan_pnsri0.webp', category: 'cats' },
-  { id: 21, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485944/Goldie_6_Desember_2024_Scottish_Fold_Betina_bidon5.webp', category: 'cats' },
-  { id: 22, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485942/Garfield_18_April_2025_Maincone_Jantan_f5gye9.webp', category: 'cats' },
-  { id: 23, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485940/Zoe_Snowy_29_Maret_2025_Maincone_Betina_fd5rrv.webp', category: 'cats' },
-  { id: 24, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485939/Fla_26_Oktober_2024_British_Short_Hair_Jantan_jpticf.webp', category: 'cats' },
-  { id: 25, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485937/Beruang_7_September_2025_Himalaya_Jantan_hsbxmh.webp', category: 'cats' },
-  { id: 26, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490833/IMG_2019_n8hzvf.webp', category: 'interior' },
-  { id: 27, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490831/IMG_2024_jfuoaw.webp', category: 'interior' },
-  { id: 28, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490829/IMG_2021_hxwckj.webp', category: 'interior' },
-  { id: 29, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490826/IMG_3075_bp26qb.webp', category: 'interior' },
-  { id: 30, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490825/IMG_3078_mhjpse.webp', category: 'interior' },
-  { id: 31, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490825/IMG_3076_fohmyf.webp', category: 'interior' },
+const cats = [
+  {
+    id: 1,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485987/Katniss_4_Agustus_2023_British_Short_Hair_Betina_hirdm8.webp',
+    name: 'Katniss',
+    birthDate: '4 Agustus 2023',
+    breed: 'British Short Hair',
+    gender: 'Female'
+  },
+  {
+    id: 2,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485984/Nala_10_September_2022_Domestic_Betina_ipp2nr.webp',
+    name: 'Nala',
+    birthDate: '10 September 2022',
+    breed: 'Domestic',
+    gender: 'Female'
+  },
+  {
+    id: 3,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485982/Kartono_1_Juli_2024_British_Short_Hair_Jantan_xkyigr.webp',
+    name: 'Kartono',
+    birthDate: '1 Juli 2024',
+    breed: 'British Short Hair',
+    gender: 'Male'
+  },
+  {
+    id: 4,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485980/Shabrina_11_September_2022_British_Short_Hair_Betina_typfva.webp',
+    name: 'Shabrina',
+    birthDate: '11 September 2022',
+    breed: 'British Short Hair',
+    gender: 'Female'
+  },
+  {
+    id: 5,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485978/Benito_17_Agustus_2022_British_Short_Hair_Jantan_tlpntx.webp',
+    name: 'Benito',
+    birthDate: '17 Agustus 2022',
+    breed: 'British Short Hair',
+    gender: 'Male'
+  },
+  {
+    id: 6,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485976/Molly_26_Maret_2024_Persia_Peaknose_Longhair_Betina_wrodb8.webp',
+    name: 'Molly',
+    birthDate: '26 Maret 2024',
+    breed: 'Persia Peaknose Longhair',
+    gender: 'Female'
+  },
+  {
+    id: 7,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485973/Nemo_15_Januari_2022_Domestic_Jantan_e3tjgk.webp',
+    name: 'Nemo',
+    birthDate: '15 Januari 2022',
+    breed: 'Domestic',
+    gender: 'Male'
+  },
+  {
+    id: 8,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485971/Junior_16_Februari_2024_Persia_Peaknose_Longhair_Jantan_rav7or.webp',
+    name: 'Junior',
+    birthDate: '16 Februari 2024',
+    breed: 'Persia Peaknose Longhair',
+    gender: 'Male'
+  },
+  {
+    id: 9,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485969/Hugo_9_Januari_2023_British_Short_Hair_Jantan_cpc1mn.webp',
+    name: 'Hugo',
+    birthDate: '9 Januari 2023',
+    breed: 'British Short Hair',
+    gender: 'Male'
+  },
+  {
+    id: 10,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485967/Hilya_Persia_Peaknose_Longhair_Betina_og7fdq.webp',
+    name: 'Hilya',
+    birthDate: '—',
+    breed: 'Persia Peaknose Longhair',
+    gender: 'Female'
+  },
+  {
+    id: 11,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485965/Chanakya_Puspa_6_Februari_2023_Exotic_ShortHair_Peaknose_Betina_rss4it.webp',
+    name: 'Chanakya Puspa',
+    birthDate: '6 Februari 2023',
+    breed: 'Exotic ShortHair Peaknose',
+    gender: 'Female'
+  },
+  {
+    id: 12,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485963/Boni_10_Desember_2016_Dom_Mix_Persia_Persia_Medium__Betina_rxxlwf.webp',
+    name: 'Boni',
+    birthDate: '10 Desember 2016',
+    breed: 'Persia Medium',
+    gender: 'Female'
+  },
+  {
+    id: 13,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485961/Xavia_16_Maret_2024_Persia_Peaknose_Longhair_Betina_ligniq.webp',
+    name: 'Xavia',
+    birthDate: '16 Maret 2024',
+    breed: 'Persia Peaknose Longhair',
+    gender: 'Female'
+  },
+  {
+    id: 14,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485959/Sadiya_5_Mei_2024_British_Short_Hair_Betina_sjylws.webp',
+    name: 'Sadiya',
+    birthDate: '5 Mei 2024',
+    breed: 'British Short Hair',
+    gender: 'Female'
+  },
+  {
+    id: 15,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485957/Princes_7_Juni_2025_Ragdoll_Betina_htyffp.webp',
+    name: 'Princes',
+    birthDate: '7 Juni 2025',
+    breed: 'Ragdoll',
+    gender: 'Female'
+  },
+  {
+    id: 16,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485954/Prince_10_Agustus_2025_Ragdoll_Jantan_omnzlb.webp',
+    name: 'Prince',
+    birthDate: '10 Agustus 2025',
+    breed: 'Ragdoll',
+    gender: 'Male'
+  },
+  {
+    id: 17,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485952/Olivia_27_April_2018_Persia_Peaknose_Longhair_Betina_dphhpb.webp',
+    name: 'Olivia',
+    birthDate: '27 April 2018',
+    breed: 'Persia Peaknose Longhair',
+    gender: 'Female'
+  },
+  {
+    id: 18,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485950/Milo_30_Juni_2019_Persia_Peaknose_Longhair_Jantan_hfo2pd.webp',
+    name: 'Milo',
+    birthDate: '30 Juni 2019',
+    breed: 'Persia Peaknose Longhair',
+    gender: 'Male'
+  },
+  {
+    id: 19,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485948/Milea_Persia_Peaknose_Longhair_Betina_qywgqz.webp',
+    name: 'Milea',
+    birthDate: '—',
+    breed: 'Persia Peaknose Longhair',
+    gender: 'Female'
+  },
+  {
+    id: 20,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485946/Kiko_Persia_Peaknose_Longhair_Jantan_pnsri0.webp',
+    name: 'Kiko',
+    birthDate: '—',
+    breed: 'Persia Peaknose Longhair',
+    gender: 'Male'
+  },
+  {
+    id: 21,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485944/Goldie_6_Desember_2024_Scottish_Fold_Betina_bidon5.webp',
+    name: 'Goldie',
+    birthDate: '6 Desember 2024',
+    breed: 'Scottish Fold',
+    gender: 'Female'
+  },
+  {
+    id: 22,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485942/Garfield_18_April_2025_Maincone_Jantan_f5gye9.webp',
+    name: 'Garfield',
+    birthDate: '18 April 2025',
+    breed: 'Maincone',
+    gender: 'Male'
+  },
+  {
+    id: 23,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485940/Zoe_Snowy_29_Maret_2025_Maincone_Betina_fd5rrv.webp',
+    name: 'Zoe Snowy',
+    birthDate: '29 Maret 2025',
+    breed: 'Maincone',
+    gender: 'Female'
+  },
+  {
+    id: 24,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485939/Fla_26_Oktober_2024_British_Short_Hair_Jantan_jpticf.webp',
+    name: 'Fla',
+    birthDate: '26 Oktober 2024',
+    breed: 'British Short Hair',
+    gender: 'Male'
+  },
+  {
+    id: 25,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485937/Beruang_7_September_2025_Himalaya_Jantan_hsbxmh.webp',
+    name: 'Beruang',
+    birthDate: '7 September 2025',
+    breed: 'Himalaya',
+    gender: 'Male'
+  }
+]
+
+const interiors = [
+  {
+    id: 26,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490833/IMG_2019_n8hzvf.webp',
+    title: 'Front View'
+  },
+  {
+    id: 27,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490831/IMG_2024_jfuoaw.webp',
+    title: 'Indoor Lounge'
+  },
+  {
+    id: 28,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490829/IMG_2021_hxwckj.webp',
+    title: 'Cat Friendly Area'
+  },
+  {
+    id: 29,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490826/IMG_3075_bp26qb.webp',
+    title: 'Outdoor Lounge'
+  },
+  {
+    id: 30,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490825/IMG_3078_mhjpse.webp',
+    title: 'Prayer Room'
+  },
+  {
+    id: 31,
+    image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490825/IMG_3076_fohmyf.webp',
+    title: 'Fun Corner'
+  }
 ]
 
 const filters = [
@@ -56,14 +258,13 @@ const filters = [
 
 export default function Gallery() {
   const [activeFilter, setActiveFilter] = useState('all')
-  const [selectedImage, setSelectedImage] = useState(null)
 
-  const filteredImages = activeFilter === 'all'
-    ? galleryImages
-    : galleryImages.filter(img => img.category === activeFilter)
+  const filteredCats = activeFilter === 'all' || activeFilter === 'cats' ? cats : []
+  const filteredInteriors = activeFilter === 'all' || activeFilter === 'interior' ? interiors : []
 
   return (
     <div>
+
       <section className="relative pt-24 pb-12 bg-gradient-to-br from-primary-50 to-secondary-50">
         <div className="container-custom">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="text-center">
@@ -88,33 +289,81 @@ export default function Gallery() {
 
       <section className="section-padding bg-secondary-50">
         <div className="container-custom">
-          <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {filteredImages.slice(0, 31).map((image, index) => (
-              <motion.div key={image.id} variants={fadeInUp} layout whileHover={{ scale: 1.03 }} onClick={() => setSelectedImage(image)} className="aspect-square overflow-hidden rounded-xl cursor-pointer">
-                <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
-              </motion.div>
-            ))}
-          </motion.div>
+          {(() => {
+            const catsToRender = filteredCats.slice(0, 31)
+            const interiorsToRender = filteredInteriors.slice(0, 31)
 
-          {filteredImages.length === 0 && (
-            <div className="text-center py-20">
-              <p className="text-secondary-500 text-lg">Tidak ada foto dalam kategori ini</p>
-            </div>
-          )}
+            const showCats = activeFilter === 'all' || activeFilter === 'cats'
+            const showInteriors = activeFilter === 'all' || activeFilter === 'interior'
+            const hasAny = (catsToRender.length > 0) || (interiorsToRender.length > 0)
+
+            if (!hasAny) {
+              return (
+                <div className="text-center py-20">
+                  <p className="text-secondary-500 text-lg">Tidak ada foto dalam kategori ini</p>
+                </div>
+              )
+            }
+
+            return (
+              <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {showCats && catsToRender.map((item) => (
+                  <motion.article
+                    key={item.id}
+                    variants={fadeInUp}
+                    layout
+                    className="group bg-white rounded-2xl shadow-soft overflow-hidden transition-all duration-300 hover:shadow-card hover:-translate-y-1"
+                  >
+                    <div className="relative aspect-square overflow-hidden">
+                      <img
+                        src={item.image}
+                        alt={item.name || 'Foto Kucing'}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03] pointer-events-none select-none"
+                        draggable={false}
+                      />
+
+                      <div className="absolute top-3 left-3 right-3 flex flex-wrap gap-2 pointer-events-none">
+                        <span className="bg-primary-500 text-white text-[10px] md:text-[11px] font-semibold px-2 py-1 rounded-[5px] shadow-sm">
+                        {item.breed}
+                        </span>
+                        <span className="bg-primary-500 text-white text-[10px] md:text-[11px] font-semibold px-2 py-1 rounded-[5px] shadow-sm">
+                        {item.gender}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-3 md:p-4 space-y-1">
+                      <h3 className="font-semibold text-secondary-900 text-sm md:text-base">{item.name}</h3>
+                      <p className="text-xs md:text-sm text-secondary-600">{item.birthDate}</p>
+                    </div>
+                  </motion.article>
+                ))}
+
+                {showInteriors && interiorsToRender.map((item) => (
+                  <motion.article
+                    key={item.id}
+                    variants={fadeInUp}
+                    layout
+                    className="bg-white rounded-2xl shadow-soft overflow-hidden transition-all duration-300"
+                  >
+                    <div className="aspect-square overflow-hidden">
+                      <img
+                        src={item.image}
+                        alt={item.title || 'Foto Interior'}
+                        className="w-full h-full object-cover pointer-events-none select-none"
+                        draggable={false}
+                      />
+                    </div>
+                    <div className="p-3 md:p-4">
+                      <h3 className="font-semibold text-secondary-900 text-sm md:text-base">{item.title}</h3>
+                    </div>
+                  </motion.article>
+                ))}
+              </motion.div>
+            )
+          })()}
         </div>
       </section>
-
-      <AnimatePresence>
-        {selectedImage && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
-            <motion.div initial={{ scale: 0.8 }} animate={{ scale: 1 }} exit={{ scale: 0.8 }} className="relative max-w-4xl w-full" onClick={(e) => e.stopPropagation()}>
-              <button onClick={() => setSelectedImage(null)} className="absolute -top-10 right-0 text-white text-sm hover:text-primary-400 transition-colors">Tutup</button>
-              <img src={selectedImage.src} alt={selectedImage.alt} className="w-full h-auto max-h-[80vh] object-contain rounded-2xl" />
-              <p className="text-white text-center mt-4 text-lg">{selectedImage.alt}</p>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   )
 }

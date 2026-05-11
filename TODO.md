@@ -1,9 +1,9 @@
-- [x] Add premium Instagram CTA section to `src/pages/EventPaket.jsx`
-- [x] Include headline/subtext exactly as requested
-- [x] Add Instagram button using existing `.btn-primary` styling + Instagram icon
-- [x] Add subtle fade+slide entrance animation via framer-motion
-- [x] Add subtle decorative background accents compatible with theme (no fixed hex)
-- [x] (Optional) Add Instagram thumbnail grid preview (6 thumbnails) and responsive layout
-- [x] Verify build/lint with project scripts
+# TODO
 
+- [ ] Perbaiki halaman Gallery (`src/pages/Gallery.jsx`) agar tampilan kembali sesuai data yang tersedia (`galleryImages` berisi `id`, `src`, `category`).
+  - [ ] Ganti `image.image` -> `image.src`
+  - [ ] Perbaiki `alt` sesuai kategori
+  - [ ] Hapus bagian info `name/birthDate/breed/title` yang tidak ada di data
+  - [ ] Pastikan filter "All Photos / Kucing / Interior" dan layout grid tetap berjalan
+- [ ] Jalankan build/dev untuk memastikan tidak ada error
 
