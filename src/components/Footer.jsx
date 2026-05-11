@@ -15,9 +15,9 @@ const quickLinks = [
 ]
 
 const foodDeliveryLinks = [
-  { name: 'Grab Food', href: '#', logo: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1777007729/grepud_zwzbl9.png' },
-  { name: 'Shopee Food', href: '#', logo: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1777007729/sopipod_qfifme.png' },
-  { name: 'Go Food', href: '#', logo: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1777007729/Gopud_i3ajv1.png' },
+  { name: 'Grab Food', href: 'https://r.grab.com/g/6-20260423_143348_b80ae82be8e04574b79b7e3d393ee328_MEXMPS-6-C7MADADVLEVXGN', logo: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1777007729/grepud_zwzbl9.png' },
+  { name: 'Shopee Food', href: 'https://shopee.co.id/universal-link/now-food/shop/22384866?deep_and_deferred=1&shareChannel=copy_link', logo: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1777007729/sopipod_qfifme.png' },
+  { name: 'Go Food', href: 'https://gofood.link/a/RfCvW9Y', logo: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1777007729/Gopud_i3ajv1.png' },
 ]
 
 export default function Footer() {

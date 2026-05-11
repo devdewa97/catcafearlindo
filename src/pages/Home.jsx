@@ -28,14 +28,14 @@ const galleryImages = [
 
 // Menu items - 8 best sellers with images only
 const menuItems = [
-  { id: 1, name: 'Cappuccino', image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400' },
-  { id: 2, name: 'Matcha Latte', image: 'https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=400' },
-  { id: 3, name: 'Latte', image: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?w=400' },
-  { id: 4, name: 'Croissant', image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400' },
-  { id: 5, name: 'Americano', image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400' },
-  { id: 6, name: 'Blueberry Muffin', image: 'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=400' },
-  { id: 7, name: 'Mocha', image: 'https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=400' },
-  { id: 8, name: 'Cheesecake', image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=400' },
+  { id: 1, name: 'Cat Curry Fried Rice', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778471644/Cat_Curry_Fried_Rice_s86ms3.jpg' },
+  { id: 2, name: 'Beef Katsu Curry', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778471640/Beef_Katsu_Curry_uxaoei.jpg' },
+  { id: 3, name: 'Ice Capucino', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778471639/Ice_Cappucino_jnnvnk.jpg' },
+  { id: 4, name: 'Beef Blackpaper', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778471638/Beef_Blackpapper_btgpot.jpg' },
+  { id: 5, name: 'Seafood Fried Noodle', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778471588/Seafood_Fried_Noodle_ilbrvm.jpg' },
+  { id: 6, name: 'Rawon', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778471541/Rawon_szn47a.jpg' },
+  { id: 7, name: 'Konro Iga', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778471537/Konro_Iga_ztqfev.jpg' },
+  { id: 8, name: 'Lemon Mint Mojito', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778471534/Lemon_Mint_Mojito_xwxfnt.jpg' },
 ]
 
 // Testimonials - static 3 cards
