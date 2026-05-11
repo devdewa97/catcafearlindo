@@ -16,26 +16,26 @@ const staggerContainer = {
 
 // Gallery Images - organized grid
 const galleryImages = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600', alt: 'Persian Cat' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=600', alt: 'Scottish Fold' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=600', alt: 'British Shorthair' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=600', alt: 'Orange Tabby' },
-  { id: 5, src: 'https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=600', alt: 'Cat Playing' },
-  { id: 6, src: 'https://images.unsplash.com/photo-1574158622682-e40e69881006?w=600', alt: 'Cafe Interior' },
-  { id: 7, src: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=600', alt: 'Cat Sleeping' },
-  { id: 8, src: 'https://images.unsplash.com/photo-1543852786-1cf6624b9987?w=600', alt: 'Cute Cat' },
+  { id: 1, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485982/Kartono_1_Juli_2024_British_Short_Hair_Jantan_xkyigr.webp' },
+  { id: 2, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485980/Shabrina_11_September_2022_British_Short_Hair_Betina_typfva.webp' },
+  { id: 3, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485976/Molly_26_Maret_2024_Persia_Peaknose_Longhair_Betina_wrodb8.webp' },
+  { id: 4, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485965/Chanakya_Puspa_6_Februari_2023_Exotic_ShortHair_Peaknose_Betina_rss4it.webp' },
+  { id: 5, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485973/Nemo_15_Januari_2022_Domestic_Jantan_e3tjgk.webp' },
+  { id: 6, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485937/Beruang_7_September_2025_Himalaya_Jantan_hsbxmh.webp' },
+  { id: 7, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485969/Hugo_9_Januari_2023_British_Short_Hair_Jantan_cpc1mn.webp' },
+  { id: 8, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485963/Boni_10_Desember_2016_Dom_Mix_Persia_Persia_Medium__Betina_rxxlwf.webp' },
 ]
 
 // Menu items - 8 best sellers with images only
 const menuItems = [
-  { id: 1, name: 'Cat Curry Fried Rice', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778471644/Cat_Curry_Fried_Rice_s86ms3.jpg' },
-  { id: 2, name: 'Beef Katsu Curry', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778471640/Beef_Katsu_Curry_uxaoei.jpg' },
-  { id: 3, name: 'Ice Capucino', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778471639/Ice_Cappucino_jnnvnk.jpg' },
-  { id: 4, name: 'Beef Blackpaper', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778471638/Beef_Blackpapper_btgpot.jpg' },
-  { id: 5, name: 'Seafood Fried Noodle', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778471588/Seafood_Fried_Noodle_ilbrvm.jpg' },
-  { id: 6, name: 'Rawon', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778471541/Rawon_szn47a.jpg' },
-  { id: 7, name: 'Konro Iga', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778471537/Konro_Iga_ztqfev.jpg' },
-  { id: 8, name: 'Lemon Mint Mojito', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778471534/Lemon_Mint_Mojito_xwxfnt.jpg' },
+  { id: 1, name: 'Cat Curry Fried Rice', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778471644/Cat_Curry_Fried_Rice_s86ms3.jpg' },
+  { id: 2, name: 'Beef Katsu Curry', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778471640/Beef_Katsu_Curry_uxaoei.jpg' },
+  { id: 3, name: 'Ice Capucino', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778471639/Ice_Cappucino_jnnvnk.jpg' },
+  { id: 4, name: 'Beef Blackpaper', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778471638/Beef_Blackpapper_btgpot.jpg' },
+  { id: 5, name: 'Seafood Fried Noodle', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778471588/Seafood_Fried_Noodle_ilbrvm.jpg' },
+  { id: 6, name: 'Rawon', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778471541/Rawon_szn47a.jpg' },
+  { id: 7, name: 'Konro Iga', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778471537/Konro_Iga_ztqfev.jpg' },
+  { id: 8, name: 'Lemon Mint Mojito', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778471534/Lemon_Mint_Mojito_xwxfnt.jpg' },
 ]
 
 // Testimonials - static 3 cards
@@ -105,12 +105,12 @@ export default function Home() {
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="relative mt-6 lg:mt-0">
               <div className="grid grid-cols-2 gap-3 md:gap-4">
                 <div className="space-y-3 md:space-y-4">
-                  <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=400" alt="Cat 1" className="rounded-xl md:rounded-2xl shadow-card w-full h-36 md:h-48 object-cover" />
-                  <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=400" alt="Cat 2" className="rounded-xl md:rounded-2xl shadow-card w-full h-48 md:h-64 object-cover" />
+                  <img src="https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485965/Chanakya_Puspa_6_Februari_2023_Exotic_ShortHair_Peaknose_Betina_rss4it.webp" alt="Cat 1" className="rounded-xl md:rounded-2xl shadow-card w-full h-36 md:h-48 object-cover" />
+                  <img src="https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485950/Milo_30_Juni_2019_Persia_Peaknose_Longhair_Jantan_hfo2pd.webp" alt="Cat 2" className="rounded-xl md:rounded-2xl shadow-card w-full h-48 md:h-64 object-cover" />
                 </div>
                 <div className="space-y-3 md:space-y-4 pt-6 md:pt-8">
-                  <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=400" alt="Cat 3" className="rounded-xl md:rounded-2xl shadow-card w-full h-48 md:h-64 object-cover" />
-                  <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=400" alt="Cat 4" className="rounded-xl md:rounded-2xl shadow-card w-full h-36 md:h-48 object-cover" />
+                  <img src="https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485942/Garfield_18_April_2025_Maincone_Jantan_f5gye9.webp" alt="Cat 3" className="rounded-xl md:rounded-2xl shadow-card w-full h-48 md:h-64 object-cover" />
+                  <img src="https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485976/Molly_26_Maret_2024_Persia_Peaknose_Longhair_Betina_wrodb8.webp" alt="Cat 4" className="rounded-xl md:rounded-2xl shadow-card w-full h-36 md:h-48 object-cover" />
                 </div>
               </div>
               <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }} className="absolute -bottom-3 md:-bottom-4 -right-3 md:-right-4 bg-white p-3 md:p-4 rounded-xl md:rounded-2xl shadow-card">

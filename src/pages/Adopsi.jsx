@@ -185,7 +185,7 @@ export default function Adopsi() {
               <b>Adopsi Kucing<span className="text-primary-400"> Kesayangan Anda</span></b>
             </motion.h1>
             <motion.p variants={fadeInUp} className="text-secondary-200 text-sm md:text-lg max-w-xl mx-auto mb-6">
-              Berikan rumah penuh kasih untuk kucing-kucing kami yang menunggu keluarga baru. Setiap adopsi berarti kehidupan yang lebih baik untuk mereka.
+              Adopt Kucing Arlindo merupakan sebuah shelter yang menampung berbagai macam jenis kucing. Adopt Kucing Arlindo menjadi wadah untuk para Cat Lovers yang ingin mempunyai / memelihara kucing dari jenis-jenis tertentu. Adopt Kucing Arlindo bertempatan di Cat Café by Arlindo. Saat ini kami memiliki beberapa jenis untuk di Adopt antara lain seperti British Short Hair, British Shot Hair mix Local, British Short Hair mix Exotic Short Hair, dan masih banyak lagi.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-wrap justify-center gap-4">
               <a href="#kucing" className="btn-primary text-sm md:text-base px-6 md:px-8 py-2.5 md:py-3">

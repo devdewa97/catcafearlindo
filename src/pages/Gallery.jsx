@@ -15,18 +15,37 @@ const staggerContainer = {
 }
 
 const galleryImages = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600', alt: 'Persian Cat', category: 'cats' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=600', alt: 'Scottish Fold', category: 'cats' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=600', alt: 'British Shorthair', category: 'cats' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=600', alt: 'Orange Tabby', category: 'cats' },
-  { id: 5, src: 'https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=600', alt: 'Cat Playing', category: 'cats' },
-  { id: 6, src: 'https://images.unsplash.com/photo-1574158622682-e40e69881006?w=600', alt: 'Cafe Interior', category: 'interior' },
-  { id: 7, src: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=600', alt: 'Cat Sleeping', category: 'cats' },
-  { id: 8, src: 'https://images.unsplash.com/photo-1543852786-1cf6624b9987?w=600', alt: 'Cute Cat', category: 'cats' },
-  { id: 9, src: 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=600', alt: 'White Cat', category: 'cats' },
-  { id: 10, src: 'https://images.unsplash.com/photo-1561948955-570b270e7c36?w=600', alt: 'Munchkin Cat', category: 'cats' },
-  { id: 11, src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600', alt: 'Cafe Interior 2', category: 'interior' },
-  { id: 12, src: 'https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=600', alt: 'Cozy Corner', category: 'interior' },
+  { id: 1, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485987/Katniss_4_Agustus_2023_British_Short_Hair_Betina_hirdm8.webp', category: 'cats' },
+  { id: 2, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485984/Nala_10_September_2022_Domestic_Betina_ipp2nr.webp', category: 'cats' },
+  { id: 3, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485982/Kartono_1_Juli_2024_British_Short_Hair_Jantan_xkyigr.webp', category: 'cats' },
+  { id: 4, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485980/Shabrina_11_September_2022_British_Short_Hair_Betina_typfva.webp', category: 'cats' },
+  { id: 5, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485978/Benito_17_Agustus_2022_British_Short_Hair_Jantan_tlpntx.webp', category: 'cats' },
+  { id: 6, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485976/Molly_26_Maret_2024_Persia_Peaknose_Longhair_Betina_wrodb8.webp', category: 'cats' },
+  { id: 7, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485973/Nemo_15_Januari_2022_Domestic_Jantan_e3tjgk.webp', category: 'cats' },
+  { id: 8, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485971/Junior_16_Februari_2024_Persia_Peaknose_Longhair_Jantan_rav7or.webp', category: 'cats' },
+  { id: 9, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485969/Hugo_9_Januari_2023_British_Short_Hair_Jantan_cpc1mn.webp', category: 'cats' },
+  { id: 10, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485967/Hilya_Persia_Peaknose_Longhair_Betina_og7fdq.webp', category: 'cats' },
+  { id: 11, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485965/Chanakya_Puspa_6_Februari_2023_Exotic_ShortHair_Peaknose_Betina_rss4it.webp', category: 'cats' },
+  { id: 12, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485963/Boni_10_Desember_2016_Dom_Mix_Persia_Persia_Medium__Betina_rxxlwf.webp', category: 'cats' },
+  { id: 13, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485961/Xavia_16_Maret_2024_Persia_Peaknose_Longhair_Betina_ligniq.webp', category: 'cats' },
+  { id: 14, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485959/Sadiya_5_Mei_2024_British_Short_Hair_Betina_sjylws.webp', category: 'cats' },
+  { id: 15, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485957/Princes_7_Juni_2025_Ragdoll_Betina_htyffp.webp', category: 'cats' },
+  { id: 16, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485954/Prince_10_Agustus_2025_Ragdoll_Jantan_omnzlb.webp', category: 'cats' },
+  { id: 17, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485952/Olivia_27_April_2018_Persia_Peaknose_Longhair_Betina_dphhpb.webp', category: 'cats' },
+  { id: 18, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485950/Milo_30_Juni_2019_Persia_Peaknose_Longhair_Jantan_hfo2pd.webp', category: 'cats' },
+  { id: 19, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485948/Milea_Persia_Peaknose_Longhair_Betina_qywgqz.webp', category: 'cats' },
+  { id: 20, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485946/Kiko_Persia_Peaknose_Longhair_Jantan_pnsri0.webp', category: 'cats' },
+  { id: 21, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485944/Goldie_6_Desember_2024_Scottish_Fold_Betina_bidon5.webp', category: 'cats' },
+  { id: 22, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485942/Garfield_18_April_2025_Maincone_Jantan_f5gye9.webp', category: 'cats' },
+  { id: 23, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485940/Zoe_Snowy_29_Maret_2025_Maincone_Betina_fd5rrv.webp', category: 'cats' },
+  { id: 24, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485939/Fla_26_Oktober_2024_British_Short_Hair_Jantan_jpticf.webp', category: 'cats' },
+  { id: 25, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485937/Beruang_7_September_2025_Himalaya_Jantan_hsbxmh.webp', category: 'cats' },
+  { id: 26, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490833/IMG_2019_n8hzvf.webp', category: 'interior' },
+  { id: 27, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490831/IMG_2024_jfuoaw.webp', category: 'interior' },
+  { id: 28, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490829/IMG_2021_hxwckj.webp', category: 'interior' },
+  { id: 29, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490826/IMG_3075_bp26qb.webp', category: 'interior' },
+  { id: 30, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490825/IMG_3078_mhjpse.webp', category: 'interior' },
+  { id: 31, src: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778490825/IMG_3076_fohmyf.webp', category: 'interior' },
 ]
 
 const filters = [
@@ -70,7 +89,7 @@ export default function Gallery() {
       <section className="section-padding bg-secondary-50">
         <div className="container-custom">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {filteredImages.slice(0, 12).map((image, index) => (
+            {filteredImages.slice(0, 31).map((image, index) => (
               <motion.div key={image.id} variants={fadeInUp} layout whileHover={{ scale: 1.03 }} onClick={() => setSelectedImage(image)} className="aspect-square overflow-hidden rounded-xl cursor-pointer">
                 <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
               </motion.div>

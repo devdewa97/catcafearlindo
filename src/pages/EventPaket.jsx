@@ -29,7 +29,7 @@ const eventPackages = [
       'Banner & balon Birthday',
       'Kue ulang tahun (1 besar)',
       '5 varian makanan & snacks',
-      '5 cup drinks (bebas pilih menu)',
+      'Infuse Water',
       'Free ATK (banner, topi, semprot)',
       'Gratis foto & video by admin',
       'Harga termasuk pajak'
@@ -46,10 +46,9 @@ const eventPackages = [
     facilities: [
       'Ruangan private eksklusif',
       'Dekorasi sederhana',
-      'Snack box (5 varian)',
+      'Snack box',
       'Makan siang/malam prasmanan',
-      '5 cup drinks (bebas pilih menu)',
-      'Games & ice breaking',
+      'Infuse Water',
       'Gratis foto by admin',
       'Harga termasuk pajak',
       'Cozy vibes untuk bersosial'
@@ -70,7 +69,7 @@ const eventPackages = [
       '5+ varian daging & seafood',
       'Sayuran fresh',
       'Saus &bumbu pendukung',
-      '10 cup drinks (bebas pilih menu)',
+      'Free Infuse Water',
       'Pembersihan setelah event',
       'Harga termasuk pajak'
     ]
@@ -82,13 +81,12 @@ const eventPackages = [
     image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600',
     price: 'Rp 150.000',
     pricePer: '/orang',
-    minOrder: 'Min. 30 Orang',
+    minOrder: 'Min. 20 Orang',
     facilities: [
       'Makanan berat lengkap',
       '5+ varian menu masakan',
       'Snack & cake (coffee break)',
-      '5 varian minuman',
-      'Piring &sendoksekali pakai',
+      'Infuse Water',
       'Servis antar ke lokasi',
       'Free 10 porsi tambahan',
       'Kustom menu sesuai request',
@@ -220,6 +218,112 @@ export default function EventPaket() {
               </ol>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* INSTAGRAM CTA SECTION */}
+      <section className="py-12 md:py-16 bg-secondary-50 relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[32rem] h-[32rem] bg-gradient-to-br from-primary-50 to-secondary-50 rounded-full blur-2xl opacity-70" />
+        <div className="absolute -top-10 right-[-6rem] w-72 h-72 bg-gradient-to-br from-primary-100/60 to-accent-100/60 rounded-full blur-3xl opacity-70" />
+        <div className="absolute -bottom-20 left-[-6rem] w-72 h-72 bg-gradient-to-br from-primary-100/50 to-secondary-100/50 rounded-full blur-3xl opacity-70" />
+        <div className="absolute inset-0 bg-pattern opacity-10" />
+
+        <div className="container-custom relative z-10">
+          <div className="grid lg:grid-cols-5 gap-10 items-center">
+            <div className="lg:col-span-3 text-center lg:text-left">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="text-center lg:text-left"
+              >
+                <p className="text-primary-500 font-medium mb-3">Instagram • Momen Event Terbaru</p>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary-900 mb-4">
+                  Lihat Momen Seru Lainnya di Instagram Kami!
+                </h2>
+                <p className="text-secondary-600 max-w-xl mx-auto lg:mx-0 text-sm md:text-base leading-relaxed mb-7">
+                  Temukan berbagai event seru, dokumentasi perjalanan, dan inspirasi wisata terbaik langsung dari social media kami.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                  <a
+                    href="https://www.instagram.com/catcafecatering_cibubur/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary inline-flex items-center justify-center gap-3 px-6 py-3"
+                  >
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path
+                        d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      />
+                      <path
+                        d="M17.5 6.5h.01"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                    Follow Instagram
+                  </a>
+                </div>
+              </motion.div>
+            </div>
+
+            <div className="lg:col-span-2">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.05 }}
+                className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-soft p-4 md:p-5 border border-secondary-100"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <p className="text-sm font-semibold text-secondary-900">Preview Feed</p>
+                  <span className="text-xs font-medium text-primary-600">@catcafecatering_cibubur</span>
+                </div>
+
+                <div className="grid grid-cols-3 gap-2">
+                  {[
+                    'https://img.magnific.com/free-photo/birthday-party-concept-with-joyful-people_23-2147716819.jpg',
+                    'https://img.magnific.com/free-photo/birthday-party-concept-with-joyful-people_23-2147716819.jpg',
+                    'https://img.magnific.com/free-photo/birthday-party-concept-with-joyful-people_23-2147716819.jpg',
+                    'https://img.magnific.com/free-photo/birthday-party-concept-with-joyful-people_23-2147716819.jpg',
+                    'https://img.magnific.com/free-photo/birthday-party-concept-with-joyful-people_23-2147716819.jpg',
+                    'https://img.magnific.com/free-photo/birthday-party-concept-with-joyful-people_23-2147716819.jpg'
+                  ].map((src, idx) => (
+                    <a
+                      key={idx}
+                      href="https://www.instagram.com/catcafecatering_cibubur/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group relative overflow-hidden rounded-xl"
+                      aria-label={`Instagram thumbnail ${idx + 1}`}
+                    >
+                      <img
+                        src={src}
+                        alt="Instagram preview"
+                        className="w-full h-24 md:h-28 object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </a>
+                  ))}
+                </div>
+
+                <p className="text-xs text-secondary-600 mt-4 text-center">
+                  Klik thumbnail untuk membuka Instagram.
+                </p>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 

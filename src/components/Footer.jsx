@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 const socialLinks = [
-  { name: 'Instagram', href: '#' },
+  { name: 'Instagram', href: 'https://www.instagram.com/catcafe_cibubur?igsh=MzlvcHB5cHVrMHN4' },
   { name: 'Facebook', href: '#' },
-  { name: 'TikTok', href: '#' },
+  { name: 'TikTok', href: 'https://www.tiktok.com/@catcafe_cibubur?_r=1&_t=ZS-95mFFHLZDEb' },
 ]
 
 const quickLinks = [
@@ -106,9 +106,8 @@ export default function Footer() {
             <div>
               <h4 className="font-bold text-white text-lg mb-4">Jam Operasional</h4>
               <ul className="space-y-2 text-secondary-300 text-sm md:text-base">
-                <li className="flex justify-between"><span>Senin - Jumat</span><span>10:00 - 21:00</span></li>
-                <li className="flex justify-between"><span>Sabtu - Minggu</span><span>09:00 - 22:00</span></li>
-                <li className="flex justify-between"><span>Hari Libur</span><span>09:00 - 20:00</span></li>
+                <li className="flex justify-between"><span>Week Day</span><span>07.30 WIB - 22:00 WIB</span></li>
+                <li className="flex justify-between"><span>Week End</span><span>06.30 WIB - 22.00 WIB</span></li>
               </ul>
             </div>
 
