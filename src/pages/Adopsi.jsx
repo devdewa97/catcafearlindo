@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 const fadeInUp = {
@@ -18,111 +18,87 @@ const staggerContainer = {
 const catsForAdoption = [
   {
     id: 1,
-    name: 'Mochi',
-    breed: 'Persian',
-    birthDate: '15 Desember 2025',
+    name: 'Adopt 1',
+    breed: 'Exotic Short Hair',
+    birthDate: '14 Mei 2025',
     price: 'Rp 350.000',
-    gender: 'Female',
+    gender: 'Male',
     color: 'Cream',
     images: [
-      'https://images.unsplash.com/photo-1574158622682-e40e69881006?w=500',
-      'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500',
-      'https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=500'
+      'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778551262/Cream_14_Mei_2025_Exotic_Short_Hair_mix_BSH_Ped_Jantan_shg4kr.webp?w=500',
     ],
-    description: 'Mochi adalah kucing Persian yang sangat manja dan lembut. Ia sangat suka dipeluk dan sangat cocok untuk keluarga yang mencari teman yang tenang. Kucing ini memiliki bulu yang panjang dan halus serta mata yang sangat menawan.',
-    personality: ['Manja', 'Tenang', 'Penyayang'],
-    health: 'Sehat, sudah vaksin lengkap',
-    weight: '2.5 kg'
   },
   {
     id: 2,
-    name: 'Oreo',
-    breed: 'British Shorthair',
-    birthDate: '20 Oktober 2025',
+    name: 'Adopt 2',
+    breed: 'Domestic Mix BSH',
+    birthDate: '1 September 2025',
     price: 'Rp 500.000',
-    gender: 'Male',
-    color: 'Black & White',
-    images: [
-      'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500',
-      'https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=500',
-      'https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=500'
-    ],
-    description: 'Oreo adalah kucing British Shorthair yang energetic dan playful. Ia sangat suka bermain bola dan sangat cocok untuk keluarga dengan anak-anak. Meskipun terlihat ganteng, ia sangat manja pada pemiliknya.',
-    personality: ['Energetic', 'Playful', 'Ramah'],
-    health: 'Sehat, sudah vaksin dan obat cacing',
-    weight: '3.2 kg'
-  },
-  {
-    id: 3,
-    name: 'Luna',
-    breed: 'Scottish Fold',
-    birthDate: '25 November 2025',
-    price: 'Rp 450.000',
     gender: 'Female',
     color: 'Grey',
     images: [
-      'https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=500',
-      'https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=500',
-      'https://images.unsplash.com/photo-1574158622682-e40e69881006?w=500'
+      'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778551256/Kalung_Orange_1_September_2025_Domestic_mix_BSH_Ped_Betina_dejszr.webp?w=500',
     ],
-    description: 'Luna adalah kucing Scottish Fold dengan mata yang sangat menawan. Ia adalah kucing yang sangat aktif dan suka mengeksplorasi lingkungan baru. Telinganya yang melipat membuat ia terlihat sangat menggemaskan.',
-    personality: ['Aktif', 'Penasaran', 'Lincah'],
-    health: 'Sehat, sudah vaksin lengkap',
-    weight: '2.8 kg'
+  },
+  {
+    id: 3,
+    name: 'Adopt 3',
+    breed: 'Domestic Mix BSH',
+    birthDate: '1 September 2025',
+    price: 'Rp 450.000',
+    gender: 'Male',
+    color: 'Grey',
+    images: [
+      'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778551255/Kalung_Hijau_1_September_2025_Domestic_mix_BSH_Ped_Jantan_tbzu26.webp?w=500',
+    ],
   },
   {
     id: 4,
-    name: 'Simba',
-    breed: 'Orange Tabby',
-    birthDate: '15 September 2025',
+    name: 'Adopt 4',
+    breed: 'Exotic Short Hair',
+    birthDate: '14 Mei 2025',
     price: 'Rp 300.000',
     gender: 'Male',
-    color: 'Orange',
+    color: 'Grey',
     images: [
-      'https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=500',
-      'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500',
-      'https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=500'
+      'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778551255/Kalung_Merah_14_Mei_2025_Exotic_Short_Hair_mix_BSH_Ped_Jantan_ehsu9k.webp?w=500',
     ],
-    description: 'Simba adalah kucing Orange Tabby yang sangat pemberani dan suka bertualang. Ia sangat cocok untuk pemilik yang aktif dan suka outdoor. Meskipun pemberani, ia sangat penyayang pada keluarganya.',
-    personality: ['Pemberani', 'Petualang', 'Loyal'],
-    health: 'Sehat, sudah vaksin lengkap',
-    weight: '3.5 kg'
   },
   {
     id: 5,
-    name: 'Cleo',
-    breed: 'Siamese',
-    birthDate: '20 Januari 2026',
+    name: 'Adopt 5',
+    breed: 'Domestic Mix BSH',
+    birthDate: '1 September 2025',
     price: 'Rp 400.000',
-    gender: 'Female',
-    color: 'Cream & Brown',
+    gender: 'Male',
+    color: 'Black & White',
     images: [
-      'https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=500',
-      'https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=500',
-      'https://images.unsplash.com/photo-1574158622682-e40e69881006?w=500'
+      'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778551254/Kalung_Biru_1_September_2025_Domestic_mix_BSH_Ped_Jantan_lrnz4y.webp?w=500',
     ],
-    description: 'Cleo adalah anak kucing Siamese yang sangat cerdas dan penasaran. Ia cepat belajar dan sangat cocok untuk pemilik yang suka melatih kucing. Matanya yang biru sapphire adalah ciri khasnya.',
-    personality: ['Cerdas', 'Penasaran', 'Mudah Dipelajari'],
-    health: 'Sehat, sudah vaksin basic',
-    weight: '2.2 kg'
   },
   {
     id: 6,
-    name: 'Bella',
-    breed: 'Ragdoll',
-    birthDate: '15 Agustus 2025',
+    name: 'Adopt 6',
+    breed: 'British Short Hair',
+    birthDate: '15 Juni 2025',
     price: 'Rp 600.000',
     gender: 'Female',
-    color: 'White & Grey',
+    color: 'Grey',
     images: [
-      'https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=500',
-      'https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=500',
-      'https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=500'
+      'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778551254/Naomi_15_Juni_2025_British_Short_Hair_Pedigree_Betina_uovyqm.webp?w=500',
     ],
-    description: 'Bella adalah kucing Ragdoll yang sangat lembut dan suka di pangku. Disebut Ragdoll karena ia akan rileks seperti boneka saat diangkat. Sangat cocok untuk keluarga yang mencari kucing yang tenang.',
-    personality: ['Lembut', 'Kalem', 'Manja'],
-    health: 'Sehat, sudah vaksin lengkap dan steril',
-    weight: '4.0 kg'
+  },
+  {
+    id: 7,
+    name: 'Adopt 7',
+    breed: 'British Short Hair',
+    birthDate: '15 Juni 2025',
+    price: 'Rp 600.000',
+    gender: 'Male',
+    color: 'Grey',
+    images: [
+      'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778551253/K-Willy_15_Juni_2025_British_Short_Hair_Pedigree_Jantan_rdrudh.webp?w=500',
+    ]
   }
 ]
 
@@ -134,33 +110,7 @@ const adoptionBenefits = [
 ]
 
 export default function Adopsi() {
-  const [selectedCat, setSelectedCat] = useState(null)
-  const [currentImageIndex, setCurrentImageIndex] = useState({})
 
-  const openModal = (cat) => {
-    setSelectedCat(cat)
-    setCurrentImageIndex({ [cat.id]: 0 })
-    document.body.style.overflow = 'hidden'
-  }
-
-  const closeModal = () => {
-    setSelectedCat(null)
-    document.body.style.overflow = 'auto'
-  }
-
-  const nextImage = (catId, images) => {
-    setCurrentImageIndex(prev => ({
-      ...prev,
-      [catId]: (prev[catId] + 1) % images.length
-    }))
-  }
-
-  const prevImage = (catId, images) => {
-    setCurrentImageIndex(prev => ({
-      ...prev,
-      [catId]: (prev[catId] - 1 + images.length) % images.length
-    }))
-  }
 
   return (
     <div>
@@ -182,9 +132,9 @@ export default function Adopsi() {
               Program Adopsi
             </motion.p>
             <motion.h1 variants={fadeInUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6">
-              <b>Adopsi Kucing<span className="text-primary-400"> Kesayangan Anda</span></b>
+              <b>Adopsi Kucing<span className="text-primary-400"> <p>Kesayangan Anda</p></span></b>
             </motion.h1>
-            <motion.p variants={fadeInUp} className="text-secondary-200 text-sm md:text-lg max-w-xl mx-auto mb-6">
+            <motion.p variants={fadeInUp} className="text-secondary-200 text-sm md:text-lg max-w-3xl md:max-w-4xl mx-auto px-4 md:px-0 mb-6">
               Adopt Kucing Arlindo merupakan sebuah shelter yang menampung berbagai macam jenis kucing. Adopt Kucing Arlindo menjadi wadah untuk para Cat Lovers yang ingin mempunyai / memelihara kucing dari jenis-jenis tertentu. Adopt Kucing Arlindo bertempatan di Cat Café by Arlindo. Saat ini kami memiliki beberapa jenis untuk di Adopt antara lain seperti British Short Hair, British Shot Hair mix Local, British Short Hair mix Exotic Short Hair, dan masih banyak lagi.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-wrap justify-center gap-4">
@@ -277,9 +227,6 @@ export default function Adopsi() {
                     alt={cat.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
-                    <span className="text-xs font-semibold text-primary-600">{cat.gender}</span>
-                  </div>
                                   </div>
 
                 {/* Content */}
@@ -290,7 +237,12 @@ export default function Adopsi() {
                       <p className="text-secondary-500 text-xs md:text-sm">{cat.color}</p>
                     </div>
                     <div className="text-right">
-                      <p className="font-bold text-primary-600 text-base md:text-lg">{cat.price}</p>
+                      <div className="flex flex-col items-end gap-1">
+                        <span className="inline-flex items-center gap-2 bg-secondary-900/90 text-white text-[11px] md:text-xs px-2.5 py-1 rounded-[10px]">
+                          Negotiable
+                        </span>
+                        <p className="font-bold text-primary-600 text-base md:text-lg">{cat.price}</p>
+                      </div>
                     </div>
                   </div>
 
@@ -306,23 +258,17 @@ export default function Adopsi() {
                     </div>
                   </div>
 
-                  {/* Personality Tags */}
-                  <div className="flex flex-wrap gap-1.5 mb-3">
-                    {cat.personality.map((trait, idx) => (
-                      <span key={idx} className="bg-primary-50 text-primary-600 text-xs px-2 py-0.5 rounded-full">
-                        {trait}
-                      </span>
-                    ))}
-                  </div>
 
                   {/* Buttons */}
                   <div className="flex gap-2">
-                    <button
-                      onClick={() => openModal(cat)}
-                      className="flex-1 bg-secondary-100 text-secondary-700 py-2.5 rounded-xl font-semibold hover:bg-secondary-200 transition-colors text-sm"
+                    <a
+                      href={`https://wa.me/6281412428997?text=Halo%20Cat%20Cafe%2C%20saya%20ingin%20bertanya%20tentang%20adopsi%20kucing%20${encodeURIComponent(cat.name)}%20(${cat.breed})`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 text-center bg-secondary-100 text-secondary-700 py-2.5 rounded-xl font-semibold hover:bg-secondary-200 transition-colors text-sm"
                     >
-                      Lihat Detail
-                    </button>
+                      Tanya Admin
+                    </a>
                     <a
                       href={`https://wa.me/6281412428997?text=Halo%20Cat%20Cafe%2C%20saya%20ingin%20adopsi%20kucing%20${encodeURIComponent(cat.name)}%20(${cat.breed})%20seharga%20${encodeURIComponent(cat.price)}`}
                       target="_blank"
@@ -352,24 +298,24 @@ export default function Adopsi() {
               <div className="grid grid-cols-2 gap-3 md:gap-4">
                 <div className="space-y-3 md:space-y-4">
                   <img
-                    src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=400"
+                    src="https://res.cloudinary.com/dmdl9p7do/image/upload/v1778551253/K-Willy_15_Juni_2025_British_Short_Hair_Pedigree_Jantan_rdrudh.webp?w=400"
                     alt="Cat 1"
                     className="rounded-xl md:rounded-2xl shadow-card w-full h-36 md:h-48 object-cover"
                   />
                   <img
-                    src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=400"
+                    src="https://res.cloudinary.com/dmdl9p7do/image/upload/v1778551254/Naomi_15_Juni_2025_British_Short_Hair_Pedigree_Betina_uovyqm.webp?w=400"
                     alt="Cat 2"
                     className="rounded-xl md:rounded-2xl shadow-card w-full h-48 md:h-64 object-cover"
                   />
                 </div>
                 <div className="space-y-3 md:space-y-4 pt-6 md:pt-8">
                   <img
-                    src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=400"
+                    src="https://res.cloudinary.com/dmdl9p7do/image/upload/v1778551254/Naomi_15_Juni_2025_British_Short_Hair_Pedigree_Betina_uovyqm.webp?w=400"
                     alt="Cat 3"
                     className="rounded-xl md:rounded-2xl shadow-card w-full h-48 md:h-64 object-cover"
                   />
                   <img
-                    src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=400"
+                    src="https://res.cloudinary.com/dmdl9p7do/image/upload/v1778551262/Cream_14_Mei_2025_Exotic_Short_Hair_mix_BSH_Ped_Jantan_shg4kr.webp?w=400"
                     alt="Cat 4"
                     className="rounded-xl md:rounded-2xl shadow-card w-full h-36 md:h-48 object-cover"
                   />
@@ -466,135 +412,6 @@ export default function Adopsi() {
         </div>
       </section>
 
-      {/* Modal Detail */}
-      <AnimatePresence>
-        {selectedCat && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
-            onClick={closeModal}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white rounded-2xl md:rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Image Gallery */}
-              <div className="relative aspect-[4/3] bg-secondary-100">
-                <img
-                  src={selectedCat.images[currentImageIndex[selectedCat.id] || 0]}
-                  alt={selectedCat.name}
-                  className="w-full h-full object-cover"
-                />
-                {selectedCat.images.length > 1 && (
-                  <>
-                    <button
-                      onClick={(e) => { e.stopPropagation(); prevImage(selectedCat.id, selectedCat.images) }}
-                      className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-lg"
-                    >
-                      <svg className="w-5 h-5 text-secondary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                      </svg>
-                    </button>
-                    <button
-                      onClick={(e) => { e.stopPropagation(); nextImage(selectedCat.id, selectedCat.images) }}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-lg"
-                    >
-                      <svg className="w-5 h-5 text-secondary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </button>
-                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
-                      {selectedCat.images.map((_, idx) => (
-                        <button
-                          key={idx}
-                          onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(prev => ({ ...prev, [selectedCat.id]: idx })) }}
-                          className={`w-2 h-2 rounded-full transition-all ${currentImageIndex[selectedCat.id] === idx ? 'bg-white w-6' : 'bg-white/50'}`}
-                        />
-                      ))}
-                    </div>
-                  </>
-                )}
-                <button
-                  onClick={closeModal}
-                  className="absolute top-3 right-3 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-lg"
-                >
-                  <svg className="w-5 h-5 text-secondary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-
-              {/* Content */}
-              <div className="p-4 md:p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="font-bold text-xl md:text-2xl text-secondary-900">{selectedCat.name}</h3>
-                    <p className="text-secondary-500 text-sm">{selectedCat.color} - {selectedCat.gender}</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="font-bold text-primary-600 text-xl md:text-2xl">{selectedCat.price}</p>
-                  </div>
-                </div>
-
-                {/* Info Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3 mb-4">
-                  <div className="bg-secondary-50 rounded-lg p-3 text-center">
-                    <p className="text-xs text-secondary-500">Jenis</p>
-                    <p className="text-xs md:text-sm font-semibold text-secondary-900">{selectedCat.breed}</p>
-                  </div>
-                  <div className="bg-secondary-50 rounded-lg p-3 text-center">
-                    <p className="text-xs text-secondary-500">Lahir</p>
-                    <p className="text-xs md:text-sm font-semibold text-secondary-900">{selectedCat.birthDate}</p>
-                  </div>
-                  <div className="bg-secondary-50 rounded-lg p-3 text-center">
-                    <p className="text-xs text-secondary-500">Berat</p>
-                    <p className="text-xs md:text-sm font-semibold text-secondary-900">{selectedCat.weight}</p>
-                  </div>
-                  <div className="bg-secondary-50 rounded-lg p-3 text-center">
-                    <p className="text-xs text-secondary-500">Kesehatan</p>
-                    <p className="text-xs md:text-sm font-semibold text-secondary-900">Sehat</p>
-                  </div>
-                </div>
-
-                {/* Personality */}
-                <div className="mb-4">
-                  <p className="text-xs text-secondary-500 mb-2">Kepribadian</p>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedCat.personality.map((trait, idx) => (
-                      <span key={idx} className="bg-primary-50 text-primary-600 text-xs px-3 py-1 rounded-full">
-                        {trait}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Description */}
-                <div className="mb-6">
-                  <p className="text-xs text-secondary-500 mb-2">Deskripsi</p>
-                  <p className="text-secondary-600 text-sm md:text-base leading-relaxed">
-                    {selectedCat.description}
-                  </p>
-                </div>
-
-                {/* CTA Button */}
-                <a
-                  href={`https://wa.me/6281412428997?text=Halo%20Cat%20Cafe%2C%20saya%20ingin%20adopsi%20kucing%20${encodeURIComponent(selectedCat.name)}%20(${selectedCat.breed})%20seharga%20${encodeURIComponent(selectedCat.price)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full text-center bg-primary-500 text-white py-3 md:py-4 rounded-xl md:rounded-2xl font-semibold hover:bg-primary-600 transition-colors text-base md:text-lg"
-                >
-                  Adopsi Sekarang
-                </a>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   )
 }

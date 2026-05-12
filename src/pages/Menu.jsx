@@ -116,13 +116,17 @@ export default function Menu() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {displayItems.map((item, index) => (
                   <motion.div key={item.id} variants={fadeInUp} whileHover={{ y: -5 }} className="bg-white rounded-xl overflow-hidden shadow-soft hover:shadow-card transition-all">
-                    <div className="aspect-square overflow-hidden">
+                    <div className="aspect-square overflow-hidden relative">
+                      {item.badge && (
+                        <span className="absolute top-3 left-3 z-10 bg-primary-100 text-primary-600 text-xs font-semibold px-2 py-0.5 rounded-[5px]">
+                          {item.badge}
+                        </span>
+                      )}
                       <img src={item.image} alt={item.name} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
                     </div>
                     <div className="p-4">
                       <div className="flex items-start justify-between mb-2">
                         <h3 className="font-bold text-secondary-900 text-sm">{item.name}</h3>
-                        {item.badge && <span className="bg-primary-100 text-primary-600 text-xs font-semibold px-2 py-0.5 rounded-full">{item.badge}</span>}
                       </div>
                     </div>
                   </motion.div>
