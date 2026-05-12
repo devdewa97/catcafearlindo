@@ -43,9 +43,9 @@ const testimonials = [
   { id: 1, name: 'Siti Rahayu', role: 'Customer', text: 'Tempatnya sangat nyaman! Kopinya enak dan kucing-kucingnya super friendly. Pasti akan kembali lagi.' },
   { id: 2, name: 'Budi Santoso', role: 'Customer', text: 'Pengalaman yang luar biasa. Anak-anak sangat senang bermain dengan kucing. Staffnya juga ramah.' },
   { id: 3, name: 'Dewi Lestari', role: 'Customer', text: 'Suka banget sama suasananya. Cocok buat nongkrong sama teman atau kerja santai. Sangat direkomendasikan!' },
-  { id: 4, name: 'Siti Rahayu', role: 'Customer', text: 'Tempatnya sangat nyaman! Kopinya enak dan kucing-kucingnya super friendly. Pasti akan kembali lagi.' },
-  { id: 5, name: 'Budi Santoso', role: 'Customer', text: 'Pengalaman yang luar biasa. Anak-anak sangat senang bermain dengan kucing. Staffnya juga ramah.' },
-  { id: 6, name: 'Dewi Lestari', role: 'Customer', text: 'Suka banget sama suasananya. Cocok buat nongkrong sama teman atau kerja santai. Sangat direkomendasikan!' },
+  { id: 4, name: 'Nadya Putri', role: 'Customer', text: 'Tempatnya super nyaman, kucing-kucingnya lucu dan terawat. Betah banget nongkrong lama di sini!' },
+  { id: 5, name: 'Rizky Pratama', role: 'Customer', text: 'Konsep cafenya unik, bersih, dan wangi. Sambil ngopi bisa main sama kucing, stress langsung hilang.' },
+  { id: 6, name: 'Maya Salsabila', role: 'Customer', text: 'Pelayanannya ramah, minumannya enak, dan suasananya bikin hati tenang. Pasti bakal balik lagi!' },
 ]
 
 export default function Home() {

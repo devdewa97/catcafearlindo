@@ -15,12 +15,12 @@ const staggerContainer = {
 }
 
 const cats = [
-  { id: 1, name: 'Mochi', breed: 'Persian', age: '2 tahun', image: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400' },
-  { id: 2, name: 'Luna', breed: 'Scottish Fold', age: '1.5 tahun', image: 'https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=400' },
-  { id: 3, name: 'Bella', breed: 'British Shorthair', age: '3 tahun', image: 'https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=400' },
-  { id: 4, name: 'Oliver', breed: 'Ragdoll', age: '2.5 tahun', image: 'https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=400' },
-  { id: 5, name: 'Cleo', breed: 'Siamese', age: '1 tahun', image: 'https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=400' },
-  { id: 6, name: 'Leo', breed: 'Maine Coon', age: '4 tahun', image: 'https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400' },
+  { id: 1, name: 'K-Willy', breed: 'BSH Pedigree', age: '15 Juni 2025', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1778551253/K-Willy_15_Juni_2025_British_Short_Hair_Pedigree_Jantan_rdrudh.webp?w=400' },
+  { id: 2, name: 'Molly', breed: 'Persia Peaknose Longhair', age: '26 Maret 2024', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485976/Molly_26_Maret_2024_Persia_Peaknose_Longhair_Betina_wrodb8.webp' },
+  { id: 3, name: 'Boni', breed: 'Persia Medium', age: '10 Desember 2016', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485963/Boni_10_Desember_2016_Dom_Mix_Persia_Persia_Medium__Betina_rxxlwf.webp' },
+  { id: 4, name: 'Chanakya Puspa', breed: 'Exotic Short Hair Peaknose', age: '6 Februari 2023', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485965/Chanakya_Puspa_6_Februari_2023_Exotic_ShortHair_Peaknose_Betina_rss4it.webp' },
+  { id: 5, name: 'Goldie', breed: 'Scottish Fold', age: '6 Desember 2024', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485944/Goldie_6_Desember_2024_Scottish_Fold_Betina_bidon5.webp' },
+  { id: 6, name: 'Fla', breed: 'British Short Hair', age: '26 Oktober 2024', image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/f_auto,q_auto,w_800/v1778485939/Fla_26_Oktober_2024_British_Short_Hair_Jantan_jpticf.webp' },
 ]
 
 export default function About() {
@@ -53,7 +53,7 @@ export default function About() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="relative">
-              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="Cat Cafe Interior" className="rounded-3xl shadow-card w-full" />
+              <img src="https://res.cloudinary.com/dmdl9p7do/image/upload/v1778552572/IMG_2019_eojsup.webp?w=600" alt="Cat Cafe Interior" className="rounded-3xl shadow-card w-full" />
               <motion.div animate={{ rotate: [0, 5, -5, 0] }} transition={{ duration: 4, repeat: Infinity }} className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-card">
                 <p className="text-4xl font-bold text-primary-500">2024</p>
                 <p className="text-secondary-600">Didirikan</p>
