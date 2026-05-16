@@ -19,7 +19,7 @@ const catsForAdoption = [
   {
     id: 1,
     name: 'Adopt 1',
-    breed: 'Exotic Short Hair',
+    breed: 'ESH Mix BSH',
     birthDate: '14 Mei 2025',
     price: 'Rp 5.000.000',
     gender: 'Male',
@@ -55,7 +55,7 @@ const catsForAdoption = [
   {
     id: 4,
     name: 'Adopt 4',
-    breed: 'Exotic Short Hair',
+    breed: 'ESH Mix BSH',
     birthDate: '14 Mei 2025',
     price: 'Rp 5.000.000',
     gender: 'Male',
